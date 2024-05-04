@@ -1,0 +1,49 @@
+|
+|
+|___ main.c:
+|          |
+|          |___ @main: entry to the program
+|
+|
+|
+|___ fractol.c: draw the corresponding fractol
+|             |
+|             |___ @render: display the corresponding fractal on the screen
+|             |
+|             |___ @initialize_fractol: initialize fractol data
+|
+|___ mandelboart.c: create mandelboart fractal
+|                 |
+|                 |___ @create_mandelboart: draw mandelboart fractal
+|
+|___ julia.c: create julia fractal
+|           |
+|           |___ @create_julia: draw julia fractal
+|
+|___ event_handler: handle the event encountered
+|                 |
+|                 |___ @mouse_handler: handle the scroll up and down event
+|                 |
+|                 |___ @key_handler: handle the left and right arrow keys
+|
+|___ fractol_utils.c: contain the helper functions
+|                   |
+|                   |___ @ft_strcmp: compare two strings
+|                   |
+|                   |___ @ft_strcpy: copy the source string to destination string
+|                   |
+|                   |___ @clor_pixel: color the wanted pixel
+|                   |
+|                   |___ @display_init: initialize the display
+|                   |
+|                   |___ @destroy_display: destroy the display in a clean way
+|                   |
+|                   |___ @send_error: exit and display the error encountered
+|
+|___ fractol.h: contain prototype function and datat struct for fractol
+|             |
+|             |___ @complex_t: data struct holding complex number
+|             |
+|             |___ @image_t: data struct holding information about image displayed
+|             |
+|             |___ @fractol_t: data struct holding information about the fractol been displayed
