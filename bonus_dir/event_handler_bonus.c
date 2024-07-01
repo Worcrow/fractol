@@ -4,15 +4,15 @@
 int    key_handler(int keysym, fractol_t *fractal)
 {
 
-    if (keysym == XK_Escape)
+    if (keysym == 53)
         destroy_display(fractal);
-    else if (keysym == XK_Left)
+    else if (keysym == 123)
         fractal->shift_X -= (0.2 * fractal->zoom);
-    else if (keysym == XK_Right)
+    else if (keysym == 124)
         fractal->shift_X += (0.2 * fractal->zoom);
-    else if (keysym == XK_Up)
+    else if (keysym == 126)
         fractal->shift_Y += (0.2 * fractal->zoom);
-    else if (keysym == XK_Down)
+    else if (keysym == 125)
         fractal->shift_Y -= (0.2 * fractal->zoom);
 
     mlx_destroy_image(fractal->mlx_ptr, fractal->img);

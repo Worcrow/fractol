@@ -79,7 +79,7 @@ int    destroy_display(fractol_t *fractal)
     }
     if (fractal->mlx_ptr)
     {
-        mlx_destroy_display(fractal->mlx_ptr);
+        //mlx_destroy_display(fractal->mlx_ptr);
         free(fractal->mlx_ptr);
         fractal->mlx_ptr = NULL;
     }

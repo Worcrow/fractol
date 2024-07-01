@@ -16,13 +16,11 @@ void    window_init(fractol_t *fractal)
     else
     {
         fractal->zoom = 1.8;
-        fractal->c.reel = 0.285;
-        fractal->z.imaginary = 0.01;
+        fractal->c.reel = 0.12;
+        fractal->z.imaginary = 0.11;
     }
 
 }
-
-
 int main(int argc, char *argv[])
 {
     fractol_t   fractol;

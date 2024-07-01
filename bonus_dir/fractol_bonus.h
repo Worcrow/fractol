@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <mlx.h>
 #include <math.h>
-#include <X11/keysym.h>
+//#include <X11/keysym.h>
 
 #define HEIGHT 800
 #define WIDTH 800

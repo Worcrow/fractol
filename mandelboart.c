@@ -25,5 +25,6 @@ void    create_mandelboart(int x, int y, fractol_t *fractal)
     else
         color_pixel(fractal, x, y, 0x114ffc * it);
 }
+//
 
 

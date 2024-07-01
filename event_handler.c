@@ -4,9 +4,8 @@
 int    key_handler(int keysym, fractol_t *fractal)
 {
 
-    if (keysym == XK_Escape)
+    if (keysym == 53)
         destroy_display(fractal);
-
     return (0);
 }
 

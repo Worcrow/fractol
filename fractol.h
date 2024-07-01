@@ -7,11 +7,11 @@
 #include <unistd.h>
 #include <mlx.h>
 #include <math.h>
-#include <X11/keysym.h>
+//#include <X11/keysym.h>s
 
 #define HEIGHT 800
 #define WIDTH 800
-#define MAX_ITERATION 50
+#define MAX_ITERATION 100
 #define REEL_LOWER_LIMIT -1.5
 #define REEL_UPPER_LIMIT 0.5 
 #define IMAGINARY_LOWER_LIMIT -1.0
