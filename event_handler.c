@@ -19,12 +19,3 @@ int     mouse_handler(int keysym, int x, int y, fractol_t *fractal)
     render(fractal);
     return (0);
 }
-
-int     mouse_motion_hook(int x, int y, fractol_t *fractal)
-{
-    fractal->c.reel = REEL_LOWER_LIMIT + (x * (fabs(REEL_LOWER_LIMIT - REEL_UPPER_LIMIT) / WIDTH)) * fractal->zoom;
-    fractal->c.imaginary = IMAGINARY_UPPER_LIMIT - (y * (fabs(IMAGINARY_UPPER_LIMIT - IMAGINARY_LOWER_LIMIT) / HEIGHT)) * fractal->zoom;
-
-    render(fractal);
-    return (0); 
-}

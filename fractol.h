@@ -36,10 +36,9 @@ typedef struct fractal {
     double      zoom;
 }   fractol_t;
 
-
 int ft_strcmp(char *str1, char *str2);
 void   ft_strcpy(char *dest, char *src);
-void    send_error(char *message, int err);
+int send_error(char *message, int err);
 void    render(fractol_t *fractal);
 void    image_initializer(fractol_t *fractal);
 void    create_mandelboart(int x, int y, fractol_t *fractal);
@@ -48,5 +47,6 @@ int    destroy_display(fractol_t *fractal);
 int    key_handler(int keysym, fractol_t *fractal);
 int     mouse_handler(int keysym, int x, int y, fractol_t *fractal);
 void    create_julia(int x, int y, fractol_t *fractal);
-int     mouse_motion_hook(int x, int y, fractol_t *fractal);
+double  ft_strtod(char *str);
+double map(double x, double in_min, double in_max, double out_min, double out_max);
 #endif

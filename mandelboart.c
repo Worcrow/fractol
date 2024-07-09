@@ -6,8 +6,8 @@ void    create_mandelboart(int x, int y, fractol_t *fractal)
     int         point_outside;
     double      temp;
 
-    fractal->c.reel = REEL_LOWER_LIMIT + (x * (fabs(REEL_LOWER_LIMIT - REEL_UPPER_LIMIT) / WIDTH)) * fractal->zoom;
-    fractal->c.imaginary = IMAGINARY_UPPER_LIMIT - (y * (fabs(IMAGINARY_UPPER_LIMIT - IMAGINARY_LOWER_LIMIT) / HEIGHT)) * fractal->zoom;
+    fractal->c.reel = map(x, 0, 800, REEL_LOWER_LIMIT, REEL_UPPER_LIMIT) * fractal->zoom;
+    fractal->c.imaginary = map(800 - y, 0, 800, IMAGINARY_LOWER_LIMIT, IMAGINARY_UPPER_LIMIT) * fractal->zoom;
     fractal->z.reel = 0;
     fractal->z.imaginary = 0;
     point_outside = 0;
@@ -25,6 +25,5 @@ void    create_mandelboart(int x, int y, fractol_t *fractal)
     else
         color_pixel(fractal, x, y, 0x114ffc * it);
 }
-//
 
 

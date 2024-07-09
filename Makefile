@@ -6,11 +6,11 @@ OBJ_BONUS=$(patsubst %.c, %.o, $(SRC_BONUS))
 
 CC=cc
 FLAGS= -Wall -Wextra -Werror
-LINKS_FLAGS=-Lmlx -lmlx -framework OpenGL -framework AppKit 
+LINKS_FLAGS= -lmlx -lXext -lX11 #-Lmlx -lmlx -framework OpenGL -framework AppKit 
 NAME=fractol
 
 all: $(NAME)
-	$(CC) $(OBJ) $(LINKS_FLAGS) -o $(NAME)
+	$(CC) $(OBJ) $(LINKS_FLAGS) -o $(NAME) -lm
 
 fractol: $(OBJ)
 	$(CC) -c $(SRC)

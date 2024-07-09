@@ -13,7 +13,6 @@ void    to_lower(char *str)
     }
 }
 
-
 int ft_strcmp(char *str1, char *str2)
 {
     int i;
@@ -40,7 +39,7 @@ void   ft_strcpy(char *dest, char *src)
     dest[i] = '\0';
 }
 
-void    send_error(char *message, int err)
+int send_error(char *message, int err)
 {
     int errno;
     int i;

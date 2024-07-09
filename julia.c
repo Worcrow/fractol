@@ -6,8 +6,8 @@ void    create_julia(int x, int y, fractol_t *fractal)
     int         point_outside;
     double      temp;
 
-    fractal->z.reel = REEL_LOWER_LIMIT + (x * (fabs(REEL_LOWER_LIMIT - REEL_UPPER_LIMIT) / WIDTH)) * fractal->zoom; 
-    fractal->z.imaginary = IMAGINARY_UPPER_LIMIT - (y * (fabs(IMAGINARY_UPPER_LIMIT - IMAGINARY_LOWER_LIMIT) / HEIGHT)) * fractal->zoom;
+    fractal->z.reel = map(x, 0, 800, REEL_LOWER_LIMIT, REEL_UPPER_LIMIT) * fractal->zoom;
+    fractal->z.imaginary = map(800 - y, 0, 800, IMAGINARY_LOWER_LIMIT, IMAGINARY_UPPER_LIMIT) * fractal->zoom;
     point_outside = 0;
     it = 0;
     while (it++ < MAX_ITERATION && !point_outside)
